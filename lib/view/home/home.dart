@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_bytes/components/drawer.dart';
+import 'package:tech_bytes/view/profile/profile.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,7 +12,14 @@ class HomeScreen extends StatelessWidget {
         title: const Text("TechBytes"),
         actions: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const ProfileScreen(),
+                ),
+              );
+            },
             child: Container(
               margin: const EdgeInsets.only(right: 20),
               padding: const EdgeInsets.all(4),

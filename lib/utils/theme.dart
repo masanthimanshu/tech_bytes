@@ -3,12 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static ThemeData theme = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: Colors.black,
-    textTheme: GoogleFonts.poppinsTextTheme().copyWith(
-      bodySmall: const TextStyle(color: Colors.white),
-      bodyMedium: const TextStyle(color: Colors.white),
-      bodyLarge: const TextStyle(color: Colors.white),
+    textTheme: GoogleFonts.poppinsTextTheme().apply(
+      bodyColor: Colors.white,
+      displayColor: Colors.white,
     ),
+    scaffoldBackgroundColor: Colors.black,
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.black,
       centerTitle: true,
@@ -18,6 +17,11 @@ class AppTheme {
       backgroundColor: Colors.black,
       shadowColor: Colors.white,
       elevation: 2,
+    ),
+    textButtonTheme: const TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: MaterialStatePropertyAll(Colors.red),
+      ),
     ),
   );
 }
